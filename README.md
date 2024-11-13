@@ -137,7 +137,7 @@ Some Existing Reference projects I referred to were:
    Each violation detection model was tested independently to validate that the bounding boxes and violation conditions were functioning correctly. For example, I confirmed that the red-light-running detector accurately recognized cars crossing a designated boundary while the light was red, and similarly, that helmet and phone detection flagged violations accurately. The Accuracy rate for each of the models were:  
    - No Helmet Detection: 85%  <img width="200" alt="Screenshot 2024-11-13 at 9 22 10 AM" src="https://github.com/user-attachments/assets/37fc8ee5-ec65-4034-9815-d5521996ce70">
 
-   - Phone Usage while driving: 74%  <img width="200" alt="Screenshot 2024-11-13 at 9 22 21 AM" src="https://github.com/user-attachments/assets/efc3b407-4caf-49d2-9da7-534798c2ba5f">
+   - Phone Usage while driving: 82%  <img width="200" alt="Screenshot 2024-11-13 at 9 22 21 AM" src="https://github.com/user-attachments/assets/efc3b407-4caf-49d2-9da7-534798c2ba5f">
 
    - Red-light running: 94%  <img width="200" alt="Screenshot 2024-11-13 at 9 22 32 AM" src="https://github.com/user-attachments/assets/6319a98c-6d27-4427-913e-3dfab9efbb0c">
 
