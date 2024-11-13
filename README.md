@@ -80,4 +80,63 @@ I will be following the traditional waterfall SDLC model, which consists of a to
       - Open video file, initialise a list to track violation frames and total frames.
       - Loop through video frames:
         - Run model inference on each frame.
-        - Identify objects as "helmet" o
+        - Identify objects as "helmet" or "without helmet" based on detections.
+        - For "without helmet":
+          - Record frame and confidence score.
+          - Draw red bounding box with label.
+        - For "helmet":
+          - Draw green bounding box with confidence score.
+        - Display each frame with bounding boxes.
+      - After processing, sort violation frames by confidence.
+      - Display each top violation frame.
+
+   - **Triples Detection**:  
+      - Load YOLOv8 model and open the video file.
+      - Initialize counters for frames, violations, and detections.
+      - Loop through each frame, running YOLO on it to detect objects.
+      - For each detection:
+        - Check if the object is a two-wheeler or a person.
+        - Store bounding box coordinates and draw them with color-coded labels.
+      - For each detected two-wheeler:
+        - Calculate distances to detected people.
+        - If three or more people are within a certain distance, flag a violation and store the frame.
+      - Calculate detection accuracy as average detections per frame.
+      - Display each frame with bounding boxes and accuracy info.
+      - Store and display frames where violations were detected.
+      - Summarise results: total frames, violation count, and final detection accuracy.
+
+   I then called all the codes in a single program, thus ensuring that the processing rate would be efficient.
+
+5. **Testing and Deployment**:  
+   Each violation detection model was tested independently to validate that the bounding boxes and violation conditions were functioning correctly. For example, I confirmed that the red-light-running detector accurately recognized cars crossing a designated boundary while the light was red, and similarly, that helmet and phone detection flagged violations accurately. The Accuracy rate for each of the models were:  
+   - No Helmet Detection: 85%  
+   - Phone Usage while driving: 74%  
+   - Red-light running: 94%  
+   - Triples Detection: 78.99%
+
+---
+
+## Limitations:
+- **Model Accuracy in Varied Environments**: The YOLOv8 model may perform inconsistently in different lighting conditions, weather, or complex backgrounds. For example, poor lighting or rainy conditions may reduce detection accuracy for objects like helmets, traffic lights, or two-wheelers.
+- **False Positives and False Negatives**: Despite a high confidence threshold, the model may occasionally misclassify objects, such as detecting non-helmet objects as helmets or failing to detect a person on a two-wheeler. This impacts the reliability of violation detection, leading to false alerts or missed violations.
+- **Detection Speed and Real-time Processing**: Running YOLOv8 on video or real-time feeds may cause processing delays, especially on standard hardware, limiting its applicability for real-time enforcement or monitoring.
+
+---
+
+## Future Scope:
+- **Real-time Optimization**: Improving model efficiency through model compression can enable real-time violation detection, making it feasible for live traffic monitoring and enforcement.
+- **Integration with License Detection and Tracking**: With car license plate detection, we can track which vehicles have done a violation and send fines to the registered vehicle's owner.
+
+---
+
+## Results and Conclusion:
+By developing this traffic violation model, I've had many key takeaways. By implementing the SDLC process, I've experienced what it's like to be in the shoes of a developer and learned firsthand how it might be as a profession in the future. I have also learned more about the real-life applications of computer vision and its implementation.
+
+---
+
+## References:
+- https://tripc.iitd.ac.in/assets/publication/RSI_2023_web.pdf  
+- https://www.ibm.com/topics/computer-vision  
+- https://www.javatpoint.com/computer-vision-applications  
+- Clark, H. (n.d.). *The Software Development Life Cycle (SDLC): 7 Phases and 5 Models*. The Product Manager. Retrieved January 15, 2024, from https://theproductmanager.com/topics/software-development-life-cycle/  
+- https://infinitylearn.com/surge/english/slogans/slogans-on-traffic-rules/#:~:text=%E2%80%9CRoad%20Rules%20Are%20Not%20Suggestions,%2C%20Red%20Light%20for%20Risk
