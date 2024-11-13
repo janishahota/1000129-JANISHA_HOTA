@@ -33,6 +33,10 @@ I will be following the traditional waterfall SDLC model, which consists of a to
    - Survey link: [Google Form Survey](https://forms.gle/ojh6PLXofioks5Te9)
    - Survey responses: [Survey responses](https://docs.google.com/spreadsheets/d/1_9gj4T2OagWgtnQu7rOWU9C9fk4x3WrNTeonmEzq8aM/edit?usp=sharing)
    I researched various current technological solutions for traffic violation detection, such as the e-Challan system in Karnataka, where violations are detected in real-time and fines are given to the vehicle’s registered owner. I decided to make a similar basic model for a few violations, based on the most occurring violations witnessed, which I obtained through my survey responses. They were red-light running, 2-wheeler Helmet detection and triples detection, and the usage of phones while driving.
+Some Existing Reference projects I referred to were: 
+-(IEEE AI based Detection of Traffic Violations by Two-Wheeler Vehicles)<https://ieeexplore.ieee.org/document/10142605>
+-(Traffic Signal Detection System)<https://github.com/anmspro/Traffic-Signal-Violation-Detection-System>
+
 
 2. **Defining**:  
    In this stage, I planned for what resources I would require, and how the app could be utilised. The resources required would be datasets for the following:  
