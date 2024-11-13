@@ -32,13 +32,15 @@ I will be following the traditional waterfall SDLC model, which consists of a to
    I first fine-tuned my idea. I surveyed to understand people's opinions on traffic violation detection and which violations they’ve witnessed occur frequently.  
    - Survey link: [Google Form Survey](https://forms.gle/ojh6PLXofioks5Te9)
    - Survey responses: [Survey responses](https://docs.google.com/spreadsheets/d/1_9gj4T2OagWgtnQu7rOWU9C9fk4x3WrNTeonmEzq8aM/edit?usp=sharing)
+     
    I researched various current technological solutions for traffic violation detection, such as the e-Challan system in Karnataka, where violations are detected in real-time and fines are given to the vehicle’s registered owner. I decided to make a similar basic model for a few violations, based on the most occurring violations witnessed, which I obtained through my survey responses. They were red-light running, 2-wheeler Helmet detection and triples detection, and the usage of phones while driving.
 Some Existing Reference projects I referred to were: 
--(IEEE AI based Detection of Traffic Violations by Two-Wheeler Vehicles)<https://ieeexplore.ieee.org/document/10142605>
--(Traffic Signal Detection System)<https://github.com/anmspro/Traffic-Signal-Violation-Detection-System>
+-[IEEE AI based Detection of Traffic Violations by Two-Wheeler Vehicles]<https://ieeexplore.ieee.org/document/10142605>
+
+-[Traffic Signal Detection System]<https://github.com/anmspro/Traffic-Signal-Violation-Detection-System>
 
 
-2. **Defining**:  
+3. **Defining**:  
    In this stage, I planned for what resources I would require, and how the app could be utilised. The resources required would be datasets for the following:  
    - Car (for red-light running)  
    - Motorcycle/2-wheeler (for triples detection and no helmet detection)  
@@ -48,13 +50,13 @@ Some Existing Reference projects I referred to were:
    - Steering Wheel (for Phone usage while driving)  
    - People (for triples detection)
 
-3. **Designing**:  
+4. **Designing**:  
    In this stage, I turn my plan into a framework for the project. I have developed an ideal user experience storyboard.
    ![Storyboard (1)](https://github.com/user-attachments/assets/439c23eb-5898-4d58-95b9-774b796d71b9)
 
    **[Storyboard made using canva.com]**
 
-4. **Development/Building**:  
+5. **Development/Building**:  
    I used Pycharm as the platform for creating the Python code.  
    **Libraries used**:  
    - Subprocess  
@@ -129,7 +131,7 @@ Some Existing Reference projects I referred to were:
       <img width="240" alt="Screenshot 2024-11-13 at 9 21 56 AM" src="https://github.com/user-attachments/assets/4817b460-bc02-4964-a0a2-e601e3d86451">
 
 
-5. **Testing and Deployment**:  
+6. **Testing and Deployment**:  
    Each violation detection model was tested independently to validate that the bounding boxes and violation conditions were functioning correctly. For example, I confirmed that the red-light-running detector accurately recognized cars crossing a designated boundary while the light was red, and similarly, that helmet and phone detection flagged violations accurately. The Accuracy rate for each of the models were:  
    - No Helmet Detection: 85%  <img width="200" alt="Screenshot 2024-11-13 at 9 22 10 AM" src="https://github.com/user-attachments/assets/37fc8ee5-ec65-4034-9815-d5521996ce70">
 
