@@ -48,8 +48,8 @@ Some Existing Reference projects I referred to were:
    - Motorcycle/2-wheeler (for triples detection and no helmet detection)  
    - Helmet/No Helmet (for no helmet detection)  
    - Traffic Light (for red-light running)  
-   - Phone (for Phone usage while driving)  
-   - Steering Wheel (for Phone usage while driving)  
+   - Phone (for Phone usage while driving 4 wheeler)  
+   - Steering Wheel (for Phone usage while driving 4 wheeler)  
    - People (for triples detection)
 
 4. **Designing**:  
