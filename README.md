@@ -11,12 +11,12 @@
 ---
 
 ## Introduction:
-Computer vision is a field of Artificial Intelligence (AI) that uses machine learning and neural networks to teach computers and systems to derive meaningful information from digital images, videos and other visual inputs—and to make recommendations or take actions when they see defects or issues. (2) Nowadays, Computer vision is in great demand and used in different areas, including robotics, manufacturing, healthcare, etc. (3)
+Computer vision is a field of Artificial Intelligence (AI) that uses machine learning and neural networks to teach computers and systems to derive meaningful information from digital images, videos and other visual inputs—and to make recommendations or take actions when they see defects or issues. (IBM, 2024) Nowadays, Computer vision is in great demand and used in different areas, including robotics, manufacturing, healthcare, etc. (“Computer Vision Applications - javaTpoint,” n.d.)
 
 ---
 
 ## Problem Statement:
-Road Rules Are Not Suggestions – They’re Lifesavers. (5) Following traffic rules and safety guidelines is of the utmost importance to avoid life-threatening accidents from occurring. According to official statistics published by the Ministry of Road Transport and Highways (MoRTH), 153,972 persons were killed in road crashes in the year 2021 in India. This corresponds to 11.3 deaths per 100,000 population. (1) With enforced regulations and fines to discourage irresponsible driving, this rate will decrease. Due to the rise in private vehicles in India over the past few years, the workload on the traffic police has greatly increased too. In case of any incidents or traffic rules violations, there should be repercussions for the perpetrator, to ensure safety and mindfulness on roads.
+Road Rules Are Not Suggestions – They’re Lifesavers. (Nalli, 2024) Following traffic rules and safety guidelines is of the utmost importance to avoid life-threatening accidents from occurring. According to official statistics published by the Ministry of Road Transport and Highways (MoRTH), 153,972 persons were killed in road crashes in the year 2021 in India. This corresponds to 11.3 deaths per 100,000 population. (Transportation Research and Injury Prevention Centre, n.d.)  With enforced regulations and fines to discourage irresponsible driving, this rate will decrease. Due to the rise in private vehicles in India over the past few years, the workload on the traffic police has greatly increased too. In case of any incidents or traffic rules violations, there should be repercussions for the perpetrator, to ensure safety and mindfulness on roads.
 
 ---
 
@@ -164,8 +164,16 @@ By developing this traffic violation model, I've had many key takeaways. By impl
 ---
 
 ## References:
-- https://tripc.iitd.ac.in/assets/publication/RSI_2023_web.pdf  
-- https://www.ibm.com/topics/computer-vision  
-- https://www.javatpoint.com/computer-vision-applications  
-- Clark, H. (n.d.). *The Software Development Life Cycle (SDLC): 7 Phases and 5 Models*. The Product Manager. Retrieved January 15, 2024, from https://theproductmanager.com/topics/software-development-life-cycle/  
-- https://infinitylearn.com/surge/english/slogans/slogans-on-traffic-rules/#:~:text=%E2%80%9CRoad%20Rules%20Are%20Not%20Suggestions,%2C%20Red%20Light%20for%20Risk
+1.Anmspro, n.d. GitHub - anmspro/Traffic-Signal-Violation-Detection-System: A Computer Vision based Traffic Signal Violation Detection System from video footage using YOLOv3 & Tkinter. (GUI Included) [WWW Document]. GitHub. URL https://github.com/anmspro/Traffic-Signal-Violation-Detection-System 
+
+2.Artificial Intelligence (AI) based Detection of Traffic Violations by Two-Wheeler Vehicles [WWW Document], 2023. . IEEE Conference Publication | IEEE Xplore. URL https://ieeexplore.ieee.org/document/10142605 
+
+3.Computer Vision Applications - javaTpoint [WWW Document], n.d. . www.javatpoint.com. URL https://www.javatpoint.com/computer-vision-applications
+
+4.Clark, H. (n.d.). The Software Development Life Cycle (SDLC): 7 Phases and 5 Models. The Product Manager. Retrieved January 15, 2024, from https://theproductmanager.com/topics/software-development-life-cycle/ 
+
+5.IBM, 2024. Computer Vision. IBM. URL https://www.ibm.com/topics/computer-vision 
+
+6.Nalli, M., 2024. Slogans On Traffic Rules. Infinity Learn by Sri Chaitanya. URL https://infinitylearn.com/surge/english/slogans/slogans-on-traffic-rules/#:~:text=%E2%80%9CRoad%20Rules%20Are%20Not%20Suggestions,%2C%20Red%20Light%20for%20Risk 
+
+7.Transportation Research and Injury Prevention Centre, n.d. ROAD SAFETY IN INDIA STATUS REPORT 2023. URL https://tripc.iitd.ac.in/assets/publication/RSI_2023_web.pdf 
