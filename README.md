@@ -84,6 +84,7 @@ I will be following the traditional waterfall SDLC model, which consists of a to
       - Displayed each frame with bounding boxes in real-time.
       - After processing, the accuracy is the percentage of frames where both objects were detected.
       - Displayed the best frame (highest confidence) if a violation was detected.
+        
         <img width="393" alt="Screenshot 2024-11-13 at 9 14 50 AM" src="https://github.com/user-attachments/assets/08a54a61-6f52-4f51-859a-1fef9835f96f">
 
 
@@ -103,7 +104,7 @@ I will be following the traditional waterfall SDLC model, which consists of a to
         - Display each frame with bounding boxes.
       - After processing, sort violation frames by confidence.
       - Display each top violation frame.
-<img width="395" alt="Screenshot 2024-11-13 at 9 20 28 AM" src="https://github.com/user-attachments/assets/bda22784-57ce-4bff-8bcd-31895bcae604">
+         <img width="395" alt="Screenshot 2024-11-13 at 9 20 28 AM" src="https://github.com/user-attachments/assets/bda22784-57ce-4bff-8bcd-31895bcae604">
 
    - **Triples Detection**:  
       - Load the YOLOv8 model and open the video file.
