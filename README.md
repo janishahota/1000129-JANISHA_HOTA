@@ -1,7 +1,7 @@
 # Machine Learning and Deep Learning
 
 ## Developing a Computer Vision-based Detection System using Machine Learning
-## Scenario 1:Computer Vision-based Traffic Violation Detection System
+## Scenario 1 : Computer Vision-based Traffic Violation Detection System
 
 **Student ID**: 1000129  
 **Name**: Janisha Hota  
@@ -32,7 +32,6 @@ I will be following the traditional waterfall SDLC model, which consists of a to
    I first fine-tuned my idea. I surveyed to understand people's opinions on traffic violation detection and which violations they’ve witnessed occur frequently.  
    - Survey link: [Google Form Survey](https://forms.gle/ojh6PLXofioks5Te9)
    - Survey responses: [Survey responses](https://docs.google.com/spreadsheets/d/1_9gj4T2OagWgtnQu7rOWU9C9fk4x3WrNTeonmEzq8aM/edit?usp=sharing)
-   - Survey responses:  
    I researched various current technological solutions for traffic violation detection, such as the e-Challan system in Karnataka, where violations are detected in real-time and fines are given to the vehicle’s registered owner. I decided to make a similar basic model for a few violations, based on the most occurring violations witnessed, which I obtained through my survey responses. They were red-light running, 2-wheeler Helmet detection and triples detection, and the usage of phones while driving.
 
 2. **Defining**:  
@@ -55,7 +54,7 @@ I will be following the traditional waterfall SDLC model, which consists of a to
    I used Pycharm as the platform for creating the Python code.  
    **Libraries used**:  
    - Subprocess  
-   - Yolo  
+   - Ultralytics (Yolov8m.pt)
    - Matplotlib  
    - Cv2  
    - Numpy
@@ -81,9 +80,9 @@ I will be following the traditional waterfall SDLC model, which consists of a to
       - For each frame, I ran the phone model and the wheel model separately.
       - Checked if a detected object was a cell phone (green box) or a wheel (blue box) and drew bounding boxes with labels.
         <img width="919" alt="Screenshot 2024-11-13 at 9 11 35 AM" src="https://github.com/user-attachments/assets/3577e305-8ab8-4f72-81e1-3bc980571f8b">
-      - If both objects were detected, counted the frame and updated the highest confidence frame if the current confidence was greater.
+      - If both objects were detected, count the frame and update the highest confidence frame if the current confidence was greater.
       - Displayed each frame with bounding boxes in real-time.
-      - After processing, the accuracy as the percentage of frames where both objects were detected.
+      - After processing, the accuracy is the percentage of frames where both objects were detected.
       - Displayed the best frame (highest confidence) if a violation was detected.
         <img width="393" alt="Screenshot 2024-11-13 at 9 14 50 AM" src="https://github.com/user-attachments/assets/08a54a61-6f52-4f51-859a-1fef9835f96f">
 
@@ -93,13 +92,13 @@ I will be following the traditional waterfall SDLC model, which consists of a to
      <img width="789" alt="Screenshot 2024-11-13 at 9 18 54 AM" src="https://github.com/user-attachments/assets/e734afb1-b70d-4f72-88fc-7c2df3a9b120">
       - Load  the custom YOLOv8 model for detecting the "helmet" and "without helmet" classes.
       - <img width="535" alt="Screenshot 2024-11-13 at 9 15 20 AM" src="https://github.com/user-attachments/assets/eab251be-1a2e-43a9-a75f-c4814ad9ce4c">
-      - Open video file, initialise a list to track violation frames and total frames.
+      - Open video file, and initialise a list to track violation frames and total frames.
       - Loop through video frames:
         - Run model inference on each frame.
         - Identify objects as "helmet" or "without helmet" based on detections.
         - For "without helmet":
           - Record frame and confidence score.
-          - Draw red bounding box with label.
+          - Draw a red bounding box with a label.
        <img width="1259" alt="Screenshot 2024-11-13 at 9 19 44 AM" src="https://github.com/user-attachments/assets/0b75bd23-32a8-48f8-91b5-26274d35220f">
         - Display each frame with bounding boxes.
       - After processing, sort violation frames by confidence.
@@ -107,7 +106,7 @@ I will be following the traditional waterfall SDLC model, which consists of a to
 <img width="395" alt="Screenshot 2024-11-13 at 9 20 28 AM" src="https://github.com/user-attachments/assets/bda22784-57ce-4bff-8bcd-31895bcae604">
 
    - **Triples Detection**:  
-      - Load YOLOv8 model and open the video file.
+      - Load the YOLOv8 model and open the video file.
       - Initialize counters for frames, violations, and detections.
       - Loop through each frame, running YOLO on it to detect objects.
       - For each detection:
