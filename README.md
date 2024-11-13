@@ -1,24 +1,27 @@
-# Computer Vision-based Traffic Violation Detection System
+# Machine Learning and Deep Learning
+
+## Developing a Computer Vision-based Detection System using Machine Learning
+## Scenario 1:Computer Vision-based Traffic Violation Detection System
 
 **Student ID**: 1000129  
 **Name**: Janisha Hota  
-**School**: Delhi Public School, Bangalore North  
+**School**: Delhi Public School Bangalore North  
 **Email**: janishahota@gmail.com  
 
 ---
 
 ## Introduction:
-Computer vision is a field of artificial intelligence (AI) that uses machine learning and neural networks to teach computers and systems to derive meaningful information from digital images, videos and other visual inputs—and to make recommendations or take actions when they see defects or issues. (2) Nowadays, Computer vision is in great demand and used in different areas, including robotics, manufacturing, healthcare, etc. (3)
+Computer vision is a field of Artificial Intelligence (AI) that uses machine learning and neural networks to teach computers and systems to derive meaningful information from digital images, videos and other visual inputs—and to make recommendations or take actions when they see defects or issues. (2) Nowadays, Computer vision is in great demand and used in different areas, including robotics, manufacturing, healthcare, etc. (3)
 
 ---
 
 ## Problem Statement:
-Road Rules Are Not Suggestions – They’re Lifesavers. (5) Following traffic rules and safety guidelines is of the utmost importance to avoid life-threatening accidents from occurring. According to official statistics published by the Ministry of Road Transport and Highways (MoRTH), 153,972 persons were killed in road crashes in the year 2021 in India. This corresponds to 11.3 deaths per 100,000 population. (1) With enforced regulations and fines to discourage irresponsible driving, this rate will decrease. Due to the rise in private vehicles in India over the past few years due to the pandemic, the workload on the traffic police has greatly increased too. In case of any incidents or traffic rules violations, there should be repercussions for the perpetrator, to ensure safety and mindfulness on roads.
+Road Rules Are Not Suggestions – They’re Lifesavers. (5) Following traffic rules and safety guidelines is of the utmost importance to avoid life-threatening accidents from occurring. According to official statistics published by the Ministry of Road Transport and Highways (MoRTH), 153,972 persons were killed in road crashes in the year 2021 in India. This corresponds to 11.3 deaths per 100,000 population. (1) With enforced regulations and fines to discourage irresponsible driving, this rate will decrease. Due to the rise in private vehicles in India over the past few years, the workload on the traffic police has greatly increased too. In case of any incidents or traffic rules violations, there should be repercussions for the perpetrator, to ensure safety and mindfulness on roads.
 
 ---
 
 ## Goal and Objective:
-To create an AI Traffic violation detection model that can detect red light running, triples riding, using a phone while driving and helmet detection on a two-wheeler using computer vision and machine learning.
+To create an AI Traffic violation detection model that can detect red light running and using a phone while driving for a four-wheeler, and helmet detection and triples riding for a two-wheeler using computer vision and machine learning.
 
 ---
 
@@ -27,7 +30,8 @@ I will be following the traditional waterfall SDLC model, which consists of a to
 
 1. **Planning**:  
    I first fine-tuned my idea. I surveyed to understand people's opinions on traffic violation detection and which violations they’ve witnessed occur frequently.  
-   - Survey link: [Google Form Survey](https://forms.gle/ojh6PLXofioks5Te9)  
+   - Survey link: [Google Form Survey](https://forms.gle/ojh6PLXofioks5Te9)
+   - Survey responses: [Survey responses](https://docs.google.com/spreadsheets/d/1_9gj4T2OagWgtnQu7rOWU9C9fk4x3WrNTeonmEzq8aM/edit?usp=sharing)
    - Survey responses:  
    I researched various current technological solutions for traffic violation detection, such as the e-Challan system in Karnataka, where violations are detected in real-time and fines are given to the vehicle’s registered owner. I decided to make a similar basic model for a few violations, based on the most occurring violations witnessed, which I obtained through my survey responses. They were red-light running, 2-wheeler Helmet detection and triples detection, and the usage of phones while driving.
 
@@ -43,7 +47,8 @@ I will be following the traditional waterfall SDLC model, which consists of a to
 
 3. **Designing**:  
    In this stage, I turn my plan into a framework for the project. I have developed an ideal user experience storyboard.
-   
+   ![Storyboard (1)](https://github.com/user-attachments/assets/439c23eb-5898-4d58-95b9-774b796d71b9)
+
    **[Storyboard made using canva.com]**
 
 4. **Development/Building**:  
@@ -61,15 +66,19 @@ I will be following the traditional waterfall SDLC model, which consists of a to
       - Loaded YOLOv8 model to detect “traffic light” and “car.”
       - Defined a vertical violation zone where car positions are checked.
       - Created a function to detect red traffic lights using HSV color space.
+        <img width="709" alt="Screenshot 2024-11-13 at 9 09 32 AM" src="https://github.com/user-attachments/assets/d5dd23d9-c888-45bc-bbf6-d9d9bc9d3ed3">
       - Processed each video frame with YOLO, filtered detections by confidence, and checked if a car in the violation zone coincided with a red light.
       - Drew bounding boxes on detected objects and the violation zone for clarity.
       - Calculated detection accuracy based on true and false positives and displayed frames with detected violations.
+      <img width="500" alt="Screenshot 2024-11-13 at 9 10 34 AM" src="https://github.com/user-attachments/assets/eceb577b-3c61-423b-9806-558c8567b40a">
 
    - **Phone Usage while Driving**:  
       - Loaded two YOLO models: one for detecting cell phones and a custom model for detecting steering wheels.
+        <img width="1008" alt="Screenshot 2024-11-13 at 9 10 58 AM" src="https://github.com/user-attachments/assets/f071201d-14be-4e4c-8683-f94085741db1">
       - Opened the video file and initialised counters for total frames and frames with both phone and wheel detected.
       - For each frame, I ran the phone model and the wheel model separately.
       - Checked if a detected object was a cell phone (green box) or a wheel (blue box) and drew bounding boxes with labels.
+        <img width="919" alt="Screenshot 2024-11-13 at 9 11 35 AM" src="https://github.com/user-attachments/assets/3577e305-8ab8-4f72-81e1-3bc980571f8b">
       - If both objects were detected, counted the frame and updated the highest confidence frame if the current confidence was greater.
       - Displayed each frame with bounding boxes in real-time.
       - After processing, the accuracy as the percentage of frames where both objects were detected.
@@ -98,14 +107,13 @@ I will be following the traditional waterfall SDLC model, which consists of a to
         - Check if the object is a two-wheeler or a person.
         - Store bounding box coordinates and draw them with color-coded labels.
       - For each detected two-wheeler:
-        - Calculate distances to detected people.
+        - Calculate distances between detected people.
         - If three or more people are within a certain distance, flag a violation and store the frame.
       - Calculate detection accuracy as average detections per frame.
       - Display each frame with bounding boxes and accuracy info.
       - Store and display frames where violations were detected.
       - Summarise results: total frames, violation count, and final detection accuracy.
 
-   I then called all the codes in a single program, thus ensuring that the processing rate would be efficient.
 
 5. **Testing and Deployment**:  
    Each violation detection model was tested independently to validate that the bounding boxes and violation conditions were functioning correctly. For example, I confirmed that the red-light-running detector accurately recognized cars crossing a designated boundary while the light was red, and similarly, that helmet and phone detection flagged violations accurately. The Accuracy rate for each of the models were:  
