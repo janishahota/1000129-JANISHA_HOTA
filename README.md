@@ -73,7 +73,9 @@ I will be following the traditional waterfall SDLC model, which consists of a to
       <img width="500" alt="Screenshot 2024-11-13 at 9 10 34 AM" src="https://github.com/user-attachments/assets/eceb577b-3c61-423b-9806-558c8567b40a">
 
    - **Phone Usage while Driving**:  
-      - Loaded two YOLO models: one for detecting cell phones and a custom model for detecting steering wheels.
+      - Make a custom model using a labelled dataset from Roboflow to ensure more accuracy for cell phone detection.
+      <img width="840" alt="Screenshot 2024-11-13 at 9 16 28 AM" src="https://github.com/user-attachments/assets/fbee1469-97e7-4ab5-b680-5ccebb848c95">
+      -Loaded two YOLO models:  a custom model for detecting cell phones and yolo for detecting steering wheels.
         <img width="1008" alt="Screenshot 2024-11-13 at 9 10 58 AM" src="https://github.com/user-attachments/assets/f071201d-14be-4e4c-8683-f94085741db1">
       - Opened the video file and initialised counters for total frames and frames with both phone and wheel detected.
       - For each frame, I ran the phone model and the wheel model separately.
@@ -83,9 +85,14 @@ I will be following the traditional waterfall SDLC model, which consists of a to
       - Displayed each frame with bounding boxes in real-time.
       - After processing, the accuracy as the percentage of frames where both objects were detected.
       - Displayed the best frame (highest confidence) if a violation was detected.
+        <img width="393" alt="Screenshot 2024-11-13 at 9 14 50 AM" src="https://github.com/user-attachments/assets/08a54a61-6f52-4f51-859a-1fef9835f96f">
+
 
    - **Helmet Detection on a 2-wheeler**:  
-      - Load YOLOv8 model for detecting the "helmet" and "without helmet" classes.
+      -Make a custom model, by obtaining a labelled dataset from Roboflow.
+     <img width="789" alt="Screenshot 2024-11-13 at 9 18 54 AM" src="https://github.com/user-attachments/assets/e734afb1-b70d-4f72-88fc-7c2df3a9b120">
+      - Load  the custom YOLOv8 model for detecting the "helmet" and "without helmet" classes.
+      - <img width="535" alt="Screenshot 2024-11-13 at 9 15 20 AM" src="https://github.com/user-attachments/assets/eab251be-1a2e-43a9-a75f-c4814ad9ce4c">
       - Open video file, initialise a list to track violation frames and total frames.
       - Loop through video frames:
         - Run model inference on each frame.
@@ -93,11 +100,11 @@ I will be following the traditional waterfall SDLC model, which consists of a to
         - For "without helmet":
           - Record frame and confidence score.
           - Draw red bounding box with label.
-        - For "helmet":
-          - Draw green bounding box with confidence score.
+       <img width="1259" alt="Screenshot 2024-11-13 at 9 19 44 AM" src="https://github.com/user-attachments/assets/0b75bd23-32a8-48f8-91b5-26274d35220f">
         - Display each frame with bounding boxes.
       - After processing, sort violation frames by confidence.
       - Display each top violation frame.
+<img width="395" alt="Screenshot 2024-11-13 at 9 20 28 AM" src="https://github.com/user-attachments/assets/bda22784-57ce-4bff-8bcd-31895bcae604">
 
    - **Triples Detection**:  
       - Load YOLOv8 model and open the video file.
@@ -106,21 +113,27 @@ I will be following the traditional waterfall SDLC model, which consists of a to
       - For each detection:
         - Check if the object is a two-wheeler or a person.
         - Store bounding box coordinates and draw them with color-coded labels.
+          <img width="500" alt="Screenshot 2024-11-13 at 9 20 42 AM" src="https://github.com/user-attachments/assets/7315d4fd-17fd-4642-bb3f-567823acb825">
       - For each detected two-wheeler:
         - Calculate distances between detected people.
         - If three or more people are within a certain distance, flag a violation and store the frame.
+          <img width="389" alt="Screenshot 2024-11-13 at 9 21 17 AM" src="https://github.com/user-attachments/assets/6a24b596-5cea-406c-ba6f-7d2af151c927">
       - Calculate detection accuracy as average detections per frame.
       - Display each frame with bounding boxes and accuracy info.
       - Store and display frames where violations were detected.
       - Summarise results: total frames, violation count, and final detection accuracy.
+      <img width="240" alt="Screenshot 2024-11-13 at 9 21 56 AM" src="https://github.com/user-attachments/assets/4817b460-bc02-4964-a0a2-e601e3d86451">
 
 
 5. **Testing and Deployment**:  
    Each violation detection model was tested independently to validate that the bounding boxes and violation conditions were functioning correctly. For example, I confirmed that the red-light-running detector accurately recognized cars crossing a designated boundary while the light was red, and similarly, that helmet and phone detection flagged violations accurately. The Accuracy rate for each of the models were:  
-   - No Helmet Detection: 85%  
-   - Phone Usage while driving: 74%  
-   - Red-light running: 94%  
-   - Triples Detection: 78.99%
+   - No Helmet Detection: 85%  <img width="200" alt="Screenshot 2024-11-13 at 9 22 10 AM" src="https://github.com/user-attachments/assets/37fc8ee5-ec65-4034-9815-d5521996ce70">
+
+   - Phone Usage while driving: 74%  <img width="200" alt="Screenshot 2024-11-13 at 9 22 21 AM" src="https://github.com/user-attachments/assets/efc3b407-4caf-49d2-9da7-534798c2ba5f">
+
+   - Red-light running: 94%  <img width="200" alt="Screenshot 2024-11-13 at 9 22 32 AM" src="https://github.com/user-attachments/assets/6319a98c-6d27-4427-913e-3dfab9efbb0c">
+
+   - Triples Detection: 78.99%   <img width="200" alt="Screenshot 2024-11-13 at 9 22 50 AM" src="https://github.com/user-attachments/assets/2a0ab59f-dca3-4bcc-9ee9-d59e2e3b9a5f">
 
 ---
 
@@ -138,7 +151,7 @@ I will be following the traditional waterfall SDLC model, which consists of a to
 ---
 
 ## Results and Conclusion:
-By developing this traffic violation model, I've had many key takeaways. By implementing the SDLC process, I've experienced what it's like to be in the shoes of a developer and learned firsthand how it might be as a profession in the future. I have also learned more about the real-life applications of computer vision and its implementation.
+By developing this traffic violation model, I've had many key takeaways. By implementing the SDLC process, I've experienced what it's like to be in the shoes of a developer and learned firsthand how it might be as a profession in the future. This project also gave me the opportunity to understand Yolo and implement it along with computer vision in real-life scenarios.
 
 ---
 
