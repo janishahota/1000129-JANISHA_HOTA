@@ -55,6 +55,7 @@ Some Existing Reference projects I referred to were:
 4. **Designing**:  
    In this stage, I turn my plan into a framework for the project. I have developed an ideal user experience storyboard.
    ![Storyboard (1)](https://github.com/user-attachments/assets/439c23eb-5898-4d58-95b9-774b796d71b9)
+   ![project flow](https://github.com/user-attachments/assets/63409ed6-c0f0-4edd-bd90-88463c0543bb)
 
    **[Storyboard made using canva.com]**
 
