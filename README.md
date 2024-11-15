@@ -144,7 +144,7 @@ Some Existing Reference projects I referred to were:
 
    - Triples Detection: 78.99%   <img width="200" alt="Screenshot 2024-11-13 at 9 22 50 AM" src="https://github.com/user-attachments/assets/2a0ab59f-dca3-4bcc-9ee9-d59e2e3b9a5f">
 
-## [PPT Link](https://www.canva.com/design/DAGWeqhRw9Q/OtlZa_0H48VsuRQcSEE69Q/edit?utm_content=DAGWeqhRw9Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+## PPT- [Link](https://www.canva.com/design/DAGWeqhRw9Q/OtlZa_0H48VsuRQcSEE69Q/edit?utm_content=DAGWeqhRw9Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 ---
 
 ## Limitations:
