@@ -1,6 +1,6 @@
-# Machine Learning and Deep Learning
+# Subject Name : Machine Learning and Deep Learning
 
-## Developing a Computer Vision-based Detection System using Machine Learning
+## Assignment Title : Developing a Computer Vision-based Detection System using Machine Learning
 ## Scenario 1 : Computer Vision-based Traffic Violation Detection System
 
 **Student ID**: 1000129  
@@ -16,7 +16,8 @@ Computer vision is a field of Artificial Intelligence (AI) that uses machine lea
 ---
 
 ## Problem Statement:
-Road Rules Are Not Suggestions – They’re Lifesavers. (Nalli, 2024) Following traffic rules and safety guidelines is of the utmost importance to avoid life-threatening accidents from occurring. According to official statistics published by the Ministry of Road Transport and Highways (MoRTH), 153,972 persons were killed in road crashes in the year 2021 in India. This corresponds to 11.3 deaths per 100,000 population. (Transportation Research and Injury Prevention Centre, n.d.)  With enforced regulations and fines to discourage irresponsible driving, this rate will decrease. Due to the rise in private vehicles in India over the past few years, the workload on the traffic police has greatly increased too. In case of any incidents or traffic rules violations, there should be repercussions for the perpetrator, to ensure safety and mindfulness on roads.
+Road Rules Are Not Suggestions – They’re Lifesavers. (Nalli, 2024) 
+Following traffic rules and safety guidelines is of the utmost importance to avoid life-threatening accidents from occurring. According to official statistics published by the Ministry of Road Transport and Highways (MoRTH), 153,972 persons were killed in road crashes in the year 2021 in India. This corresponds to 11.3 deaths per 100,000 population. (Transportation Research and Injury Prevention Centre, n.d.)  With enforced regulations and fines to discourage irresponsible driving, this rate will decrease. Due to the rise in private vehicles in India over the past few years, the workload on the traffic police has greatly increased too. In case of any incidents or traffic rules violations, there should be repercussions for the perpetrator, to ensure safety and mindfulness on roads.
 
 ---
 
@@ -33,13 +34,13 @@ I will be following the traditional waterfall SDLC model, which consists of a to
    - Survey link: [Google Form Survey](https://forms.gle/ojh6PLXofioks5Te9)
    - Survey responses: [Survey responses](https://docs.google.com/spreadsheets/d/1_9gj4T2OagWgtnQu7rOWU9C9fk4x3WrNTeonmEzq8aM/edit?usp=sharing)
      
-   I researched various current technological solutions for traffic violation detection, such as the e-Challan system in Karnataka, where violations are detected in real-time and fines are given to the vehicle’s registered owner. I decided to make a similar basic model for a few violations, based on the most occurring violations witnessed, which I obtained through my survey responses. They were red-light running, 2-wheeler Helmet detection and triples detection, and the usage of phones while driving.
+   I researched various current technological solutions for traffic violation detection, such as the e-Challan system in Karnataka, where violations are detected in real-time and fines are given to the vehicle’s registered owner. (Ergo, n.d.) I decided to make a similar basic model for a few violations, based on the most occurring violations witnessed, which I obtained through my survey responses. They were red-light running, 2-wheeler Helmet detection and triples detection, and the usage of phones while driving.
    
-Some Existing Reference projects I referred to were: 
+   Some Existing Reference projects I referred to were: 
 
--[IEEE AI based Detection of Traffic Violations by Two-Wheeler Vehicles](https://ieeexplore.ieee.org/document/10142605)
+      -[IEEE AI based Detection of Traffic Violations by Two-Wheeler Vehicles](https://ieeexplore.ieee.org/document/10142605)
 
--[Traffic Signal Detection System](https://github.com/anmspro/Traffic-Signal-Violation-Detection-System)
+      -[Traffic Signal Detection System](https://github.com/anmspro/Traffic-Signal-Violation-Detection-System)
 
 
 3. **Defining**:  
@@ -55,7 +56,8 @@ Some Existing Reference projects I referred to were:
 4. **Designing**:  
    In this stage, I turn my plan into a framework for the project. I have developed an ideal user experience storyboard.
    ![Storyboard (1)](https://github.com/user-attachments/assets/439c23eb-5898-4d58-95b9-774b796d71b9)
-   ![project flow](https://github.com/user-attachments/assets/63409ed6-c0f0-4edd-bd90-88463c0543bb)
+   
+   ![project flow (1)](https://github.com/user-attachments/assets/940b2166-1e79-40ee-b854-6fa9d13b71ab)
 
    **[Storyboard and Project Flow made using canva.com]**
 
@@ -74,22 +76,31 @@ Some Existing Reference projects I referred to were:
       - Loaded YOLOv8 model to detect “traffic light” and “car.”
       - Defined a vertical violation zone where car positions are checked.
       - Created a function to detect red traffic lights using HSV color space.
-        <img width="709" alt="Screenshot 2024-11-13 at 9 09 32 AM" src="https://github.com/user-attachments/assets/d5dd23d9-c888-45bc-bbf6-d9d9bc9d3ed3">
+    
+       <img width="709" alt="Screenshot 2024-11-13 at 9 09 32 AM" src="https://github.com/user-attachments/assets/d5dd23d9-c888-45bc-bbf6-d9d9bc9d3ed3">
+
       - Processed each video frame with YOLO, filtered detections by confidence, and checked if a car in the violation zone coincided with a red light.
       - Drew bounding boxes on detected objects and the violation zone for clarity.
       - Calculated detection accuracy based on true and false positives and displayed frames with detected violations.
+
       <img width="500" alt="Screenshot 2024-11-13 at 9 10 34 AM" src="https://github.com/user-attachments/assets/eceb577b-3c61-423b-9806-558c8567b40a">
 
    - **Phone Usage while Driving**:  
       - Make a custom model using a labelled dataset from Roboflow to ensure more accuracy for cell phone detection.
-      <img width="840" alt="Screenshot 2024-11-13 at 9 16 28 AM" src="https://github.com/user-attachments/assets/fbee1469-97e7-4ab5-b680-5ccebb848c95">
+    
+     <img width="840" alt="Screenshot 2024-11-13 at 9 16 28 AM" src="https://github.com/user-attachments/assets/fbee1469-97e7-4ab5-b680-5ccebb848c95">
+      
       -Loaded two YOLO models:  a custom model for detecting cell phones and yolo for detecting steering wheels.
-        <img width="1008" alt="Screenshot 2024-11-13 at 9 10 58 AM" src="https://github.com/user-attachments/assets/f071201d-14be-4e4c-8683-f94085741db1">
+      
+       <img width="1008" alt="Screenshot 2024-11-13 at 9 10 58 AM" src="https://github.com/user-attachments/assets/f071201d-14be-4e4c-8683-f94085741db1">
+      
       - Opened the video file and initialised counters for total frames and frames with both phone and wheel detected.
       - For each frame, I ran the phone model and the wheel model separately.
       - Checked if a detected object was a cell phone (green box) or a wheel (blue box) and drew bounding boxes with labels.
-        <img width="919" alt="Screenshot 2024-11-13 at 9 11 35 AM" src="https://github.com/user-attachments/assets/3577e305-8ab8-4f72-81e1-3bc980571f8b">
-      - If both objects were detected, count the frame and update the highest confidence frame if the current confidence was greater.
+       
+    <img width="919" alt="Screenshot 2024-11-13 at 9 11 35 AM" src="https://github.com/user-attachments/assets/3577e305-8ab8-4f72-81e1-3bc980571f8b">
+    
+     - If both objects were detected, count the frame and update the highest confidence frame if the current confidence was greater.
       - Displayed each frame with bounding boxes in real-time.
       - After processing, the accuracy is the percentage of frames where both objects were detected.
       - Displayed the best frame (highest confidence) if a violation was detected.
@@ -99,9 +110,12 @@ Some Existing Reference projects I referred to were:
 
    - **Helmet Detection on a 2-wheeler**:  
       -Make a custom model, by obtaining a labelled dataset from Roboflow.
+
      <img width="789" alt="Screenshot 2024-11-13 at 9 18 54 AM" src="https://github.com/user-attachments/assets/e734afb1-b70d-4f72-88fc-7c2df3a9b120">
       - Load  the custom YOLOv8 model for detecting the "helmet" and "without helmet" classes.
+
       - <img width="535" alt="Screenshot 2024-11-13 at 9 15 20 AM" src="https://github.com/user-attachments/assets/eab251be-1a2e-43a9-a75f-c4814ad9ce4c">
+
       - Open video file, and initialise a list to track violation frames and total frames.
       - Loop through video frames:
         - Run model inference on each frame.
@@ -109,10 +123,13 @@ Some Existing Reference projects I referred to were:
         - For "without helmet":
           - Record frame and confidence score.
           - Draw a red bounding box with a label.
+
        <img width="1259" alt="Screenshot 2024-11-13 at 9 19 44 AM" src="https://github.com/user-attachments/assets/0b75bd23-32a8-48f8-91b5-26274d35220f">
+
         - Display each frame with bounding boxes.
       - After processing, sort violation frames by confidence.
       - Display each top violation frame.
+
          <img width="395" alt="Screenshot 2024-11-13 at 9 20 28 AM" src="https://github.com/user-attachments/assets/bda22784-57ce-4bff-8bcd-31895bcae604">
 
    - **Triples Detection**:  
@@ -122,15 +139,20 @@ Some Existing Reference projects I referred to were:
       - For each detection:
         - Check if the object is a two-wheeler or a person.
         - Store bounding box coordinates and draw them with color-coded labels.
-          <img width="500" alt="Screenshot 2024-11-13 at 9 20 42 AM" src="https://github.com/user-attachments/assets/7315d4fd-17fd-4642-bb3f-567823acb825">
+      
+       <img width="500" alt="Screenshot 2024-11-13 at 9 20 42 AM" src="https://github.com/user-attachments/assets/7315d4fd-17fd-4642-bb3f-567823acb825">
+
       - For each detected two-wheeler:
         - Calculate distances between detected people.
         - If three or more people are within a certain distance, flag a violation and store the frame.
-          <img width="389" alt="Screenshot 2024-11-13 at 9 21 17 AM" src="https://github.com/user-attachments/assets/6a24b596-5cea-406c-ba6f-7d2af151c927">
+   
+       <img width="389" alt="Screenshot 2024-11-13 at 9 21 17 AM" src="https://github.com/user-attachments/assets/6a24b596-5cea-406c-ba6f-7d2af151c927">
+
       - Calculate detection accuracy as average detections per frame.
       - Display each frame with bounding boxes and accuracy info.
       - Store and display frames where violations were detected.
       - Summarise results: total frames, violation count, and final detection accuracy.
+
       <img width="240" alt="Screenshot 2024-11-13 at 9 21 56 AM" src="https://github.com/user-attachments/assets/4817b460-bc02-4964-a0a2-e601e3d86451">
 
 
@@ -144,7 +166,7 @@ Some Existing Reference projects I referred to were:
 
    - Triples Detection: 78.99%   <img width="200" alt="Screenshot 2024-11-13 at 9 22 50 AM" src="https://github.com/user-attachments/assets/2a0ab59f-dca3-4bcc-9ee9-d59e2e3b9a5f">
 
-## PPT- [Link](https://www.canva.com/design/DAGWeqhRw9Q/OtlZa_0H48VsuRQcSEE69Q/edit?utm_content=DAGWeqhRw9Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+## PPT Link -(https://www.canva.com/design/DAGWeqhRw9Q/OtlZa_0H48VsuRQcSEE69Q/edit?utm_content=DAGWeqhRw9Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 ---
 
 ## Limitations:
@@ -179,3 +201,5 @@ By developing this traffic violation model, I've had many key takeaways. By impl
 6.Nalli, M., 2024. Slogans On Traffic Rules. Infinity Learn by Sri Chaitanya. URL https://infinitylearn.com/surge/english/slogans/slogans-on-traffic-rules/#:~:text=%E2%80%9CRoad%20Rules%20Are%20Not%20Suggestions,%2C%20Red%20Light%20for%20Risk 
 
 7.Transportation Research and Injury Prevention Centre, n.d. ROAD SAFETY IN INDIA STATUS REPORT 2023. URL https://tripc.iitd.ac.in/assets/publication/RSI_2023_web.pdf 
+
+8. Ergo, H. (n.d.). Check Karnataka traffic fines & e challan online. HDFCErgo. https://www.hdfcergo.com/blogs/car-insurance/karnataka-e-challan#:~:text=The%20e%2Dchallan%20system%20is,stress%2Dfree%20experience%20for%20drivers.
