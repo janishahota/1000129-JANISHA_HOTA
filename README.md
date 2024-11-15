@@ -203,3 +203,7 @@ By developing this traffic violation model, I've had many key takeaways. By impl
 7.Transportation Research and Injury Prevention Centre, n.d. ROAD SAFETY IN INDIA STATUS REPORT 2023. URL https://tripc.iitd.ac.in/assets/publication/RSI_2023_web.pdf 
 
 8. Ergo, H. (n.d.). Check Karnataka traffic fines & e challan online. HDFCErgo. https://www.hdfcergo.com/blogs/car-insurance/karnataka-e-challan#:~:text=The%20e%2Dchallan%20system%20is,stress%2Dfree%20experience%20for%20drivers.
+
+9.Kundu, R. (n.d.). YOLO: Algorithm for Object Detection Explained [+Examples]. V7. https://www.v7labs.com/blog/yolo-object-detection
+
+10. Nelson, J. (2024, October 15). What is YOLO? The Ultimate Guide [2024]. Roboflow Blog. https://blog.roboflow.com/guide-to-yolo-models/
