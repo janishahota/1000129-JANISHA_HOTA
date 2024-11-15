@@ -154,7 +154,7 @@ accuracy = (true_positives / total_detections) * 100 if total_detections > 0 els
 print(f"Total frames processed: {total_frames}")
 print(f"True Positives: {true_positives}")
 print(f"False Positives: {false_positives}")
-print(f"Accuracy: {accuracy+80}")
+print(f"Accuracy: {accuracy}")
 
 
 # After processing the video, show the violation frames
