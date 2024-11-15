@@ -36,9 +36,9 @@ I will be following the traditional waterfall SDLC model, which consists of a to
      
    I researched various current technological solutions for traffic violation detection, such as the e-Challan system in Karnataka, where violations are detected in real-time and fines are given to the vehicle’s registered owner. (Ergo, n.d.) I decided to make a similar basic model for a few violations, based on the most occurring violations witnessed, which I obtained through my survey responses. They were red-light running, 2-wheeler Helmet detection and triples detection, and the usage of phones while driving.
    
-   Some Existing Reference projects I referred to were: 
+    ###  Some Existing Reference projects I referred to were: 
 
-      -[IEEE AI based Detection of Traffic Violations by Two-Wheeler Vehicles](https://ieeexplore.ieee.org/document/10142605)
+     -[IEEE AI based Detection of Traffic Violations by Two-Wheeler Vehicles](https://ieeexplore.ieee.org/document/10142605)
 
       -[Traffic Signal Detection System](https://github.com/anmspro/Traffic-Signal-Violation-Detection-System)
 
