@@ -44,7 +44,7 @@ I will be following the traditional waterfall SDLC model, which consists of a to
 
 
 3. **Defining**:  
-   In this stage, I planned for what resources I would require, and how the app could be utilised. The resources required would be datasets for the following:  
+   In this stage, I planned for what resources I would require, which would be datasets for the following:  
    - Car (for red-light running)  
    - Motorcycle/2-wheeler (for triples detection and no helmet detection)  
    - Helmet/No Helmet (for no helmet detection)  
