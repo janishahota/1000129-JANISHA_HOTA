@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 2
+names: ['With Helmet', 'Without Helmet']
+
+roboflow:
+  workspace: helmetdetection-wuptc
+  project: bike-helmet-detection-2vdjo-heuar
+  version: 1
+  license: Public Domain
+  url: https://universe.roboflow.com/helmetdetection-wuptc/bike-helmet-detection-2vdjo-heuar/dataset/1
