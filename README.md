@@ -144,10 +144,11 @@ Some Existing Reference projects I referred to were:
 
    - Triples Detection: 78.99%   <img width="200" alt="Screenshot 2024-11-13 at 9 22 50 AM" src="https://github.com/user-attachments/assets/2a0ab59f-dca3-4bcc-9ee9-d59e2e3b9a5f">
 
+## PPT- [Link](https://www.canva.com/design/DAGWeqhRw9Q/OtlZa_0H48VsuRQcSEE69Q/edit?utm_content=DAGWeqhRw9Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 ---
 
 ## Limitations:
-- **Model Accuracy in Varied Environments**: The YOLOv8 model may perform inconsistently in different lighting conditions, weather, or complex backgrounds. For example, poor lighting or rainy conditions may reduce detection accuracy for objects like helmets, traffic lights, or two-wheelers.
+- **Model Accuracy in Varied Environments**: The YOLOv8 model may perform inconsistently due to different lighting conditions, weather. For example, poor lighting or rainy conditions may reduce detection accuracy for objects like helmets, traffic lights, or two-wheelers.
 - **False Positives and False Negatives**: Despite a high confidence threshold, the model may occasionally misclassify objects, such as detecting non-helmet objects as helmets or failing to detect a person on a two-wheeler. This impacts the reliability of violation detection, leading to false alerts or missed violations.
 - **Detection Speed and Real-time Processing**: Running YOLOv8 on video or real-time feeds may cause processing delays, especially on standard hardware, limiting its applicability for real-time enforcement or monitoring.
 
